@@ -1,9 +1,9 @@
 library(ggplot2)
-library(ggthemes)
 library(readr)
 library(dplyr)
-library(stringr)
 library(magrittr)
+library(ggthemes)
+library(stringr)
 library(tools)
 
 full_trains <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-02-26/full_trains.csv")
