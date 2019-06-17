@@ -12,7 +12,6 @@ full_trains <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidyt
 full_trains %>% 
   filter(str_detect(departure_station, "PARIS")) %>%
   mutate(departure_station = toTitleCase(tolower(departure_station))) %>%
-  mutate(month = factor(month, levels = 1:12, labels = month.name)) %>%
   group_by(month, year, departure_station) %>%
   summarise(mean_num_of_canceled_trains = mean(num_of_canceled_trains, na.rm = TRUE)) %>%
   ggplot(aes(x = departure_station, 
